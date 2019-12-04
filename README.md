@@ -1,4 +1,5 @@
-# shipwright-blueprints
+# Shipwright Blueprints
+
 The SASS files for the Shipwright System.
 
 See main repo for:
