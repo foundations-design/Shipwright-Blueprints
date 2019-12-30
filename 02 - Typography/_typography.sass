@@ -107,7 +107,8 @@ ul
     padding: 0
     margin-bottom: var(--space-sm)
 
-ul li
+.article ul li
+    //if/when i revisit this, i need to be wary of the fact that <li> is just as commonly used outside articles as within. 
     list-style: none
 
     &::before
@@ -179,3 +180,9 @@ hr
 
 .text-caption 
     @include text-caption
+
+.logo
+    @include text(2xl)
+    font-family: var(--font-secondary)
+    font-weight: 600
+    color: var(--color-a)
