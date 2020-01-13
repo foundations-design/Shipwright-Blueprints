@@ -168,10 +168,9 @@ hr
     text-transform: uppercase
 
 // This can be included in components to add a caption style
-@mixin text-caption 
-    font-family: var(--font-secondary)
-    color: var(--color-t-caption)
-    font-weight: 600
+@mixin caption 
+    color: var(--color-t-c)
+    font-style: italic
     @include text(md)
 
 
@@ -180,8 +179,8 @@ hr
 .text-button
     @include text-button
 
-.text-caption 
-    @include text-caption
+.caption 
+    @include caption
 
 .logo p
     @include text(2xl)
