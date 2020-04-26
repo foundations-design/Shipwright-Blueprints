@@ -16,15 +16,15 @@ $screen-xl-min: 1440px // Desktop Computers
 /*=================================================*/        
 
 @mixin md
-    @media (min-width: #{$screen-md-min})
+    @media only screen and (min-width: #{$screen-md-min})
         @content
 
 @mixin lg
-    @media (min-width: #{$screen-lg-min})
+    @media only screen and (min-width: #{$screen-lg-min})
         @content
 
 @mixin xl
-    @media (min-width: #{$screen-xl-min})  
+    @media only screen and (min-width: #{$screen-xl-min})  
         @content
         
 @mixin portrait
