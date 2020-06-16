@@ -1,3 +1,6 @@
+/*----------  Import Media Queries to set Responsive Font Sizes  ----------*/
+@use "../e_layout/media"    
+    
 \:root 
 
     /*============================================*/
@@ -6,13 +9,13 @@
     
     /*----------  Set Base Font Sizes  ----------*/
 
-    --d-base-font-size: 18px
-    --m-base-font-size: 16px
+    --d-base-font-size: 20px
+    --m-base-font-size: 18px
     
     /*----------  Set Type Scale Multipliers  ----------*/
 
-    --d-multiplier: 1.333 /* Perfect Fourth */
-    --m-multiplier: 1.250 /* Major Third */
+    --d-multiplier: 1.333
+    --m-multiplier: 1.250
     
     /*=============================================
     /*               Type Scale                   =
@@ -58,14 +61,13 @@
 
 
 
-/*----------  Import Media Queries to set Responsive Font Sizes  ----------*/
-@import "../04 - Layout/_media"
+
 
 
 /*----------  Set font-size on html (responsively)  ----------*/
 html
     font-size: var(--m-base-font-size)
-    @include md
+    @include media.md
         font-size: var(--d-base-font-size)
 
 
@@ -75,7 +77,7 @@ html
 
 @mixin text($size)
     font-size: var(--m-#{$size})
-    @include md
+    @include media.md
         font-size: var(--d-#{$size})
 
 
