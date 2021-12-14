@@ -38,3 +38,9 @@ img, picture, video, canvas, svg
 input, button, textarea, select {
   font: inherit;
 }
+
+/*---------- Long words should be allowed to wrap to the next line, if necessary ------------*/
+/*---------- src: https://www.joshwcomeau.com/css/custom-css-reset/#digit-root-stacking-context ------------*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
