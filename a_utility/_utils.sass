@@ -19,10 +19,6 @@
 *, *::before, *::after
     box-sizing: border-box
 
-/*---------- img max-width 100% on all images ------------*/
-img
-    max-width: 100%
-
 /*---------- remove list styles on lists ------------*/
 nav *
     list-style: none
@@ -30,3 +26,8 @@ nav *
 /*---------- Allow quicker setting of percentage-based height ------------*/
 html, body
     height: 100%
+
+/*---------- Sensible media defaults ------------*/
+img, picture, video, canvas, svg
+  display: block;
+  max-width: 100%;
