@@ -5,29 +5,36 @@
     * Rules:
     * 1) styles MUST be applied directly to HTML tags
     * 2) each style addition should be in a commented section
+         * Comments should be written like assertions
  *
  */
 
 
 
 
-/*----------  Remove default margins ----------*/
+/*----------  All elements should have no margin as default ----------*/
 *
    margin: 0
 
-/*---------- Use border-box on all elements ------------*/
+/*---------- All elements should use border-box box-sizing------------*/
 *, *::before, *::after
     box-sizing: border-box
 
-/*---------- remove list styles on lists ------------*/
-nav *
+/*---------- Lists in a `nav` element should not have bullets ------------*/
+nav ul *
     list-style: none
    
-/*---------- Allow quicker setting of percentage-based height ------------*/
+/*---------- Height should be set on HTML and body to allow heights to be set more easily ------------*/
 html, body
     height: 100%
 
-/*---------- Sensible media defaults ------------*/
+/*---------- Media elements should fit inside their container  ------------*/
+/*---------- Media elements should not be inline elements  ------------*/
 img, picture, video, canvas, svg
   display: block;
   max-width: 100%;
+
+/*---------- Form controls should inherit their fonts ------------*/
+input, button, textarea, select {
+  font: inherit;
+}
