@@ -21,8 +21,63 @@ html
 body
    width: var(--layout-max-width)
 
+footer
+   padding-top: var(--space-md)
+   padding-bottom: var(--space-md)
+   width: 100vw
+   position: absolute
+   left: 0
+   display: grid
+   place-content: center
+
+   .sitemap
+      @include text(sm)
+
+hr
+   display: block
+   height: 1px
+   max-width: 500px
+   border: none
+   border-top: 1px dotted var(--color-a)
+   margin: 3.05rem auto
+
 .markdown-content
    --text-max-width: 65ch
 
+   h2, h3, h4, h5, h6
+      margin-top: var(--space-sm)
+
    p
       text-align: justify
+      margin-bottom: var(--space-xs)
+
+// 2a) Portfolio
+// =================================================
+
+.company
+   text-transform: uppercase
+   letter-spacing: .02em
+   color: var(--color-a)
+   // border-bottom: var(--color-a) 4px solid
+
+.hero
+   margin-top: var(--space-2xl)
+
+.greeting
+   margin-bottom: var(--space-sm)
+   @include text(4xl)
+   font-family: var(--font-secondary)
+   color: var(--color-t-h)
+   opacity: 0.9
+
+.project
+   background-color: var(--color-b-alt)
+   padding: var(--space-md)
+   margin-top: var(--space-sm)
+   margin-bottom: var(--space-sm)
+
+.featured
+   .caption
+      font-style: italic
+      color: var(--color-t)
+      text-align: right
