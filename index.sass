@@ -51,33 +51,90 @@ hr
       text-align: justify
       margin-bottom: var(--space-xs)
 
+   pre
+      margin-bottom: var(--space-xs)
+      padding-top: var(--space-xs)
+      padding-bottom: var(--space-xs)
+      background-color: var(--color-b-alt)
+      max-width: var(--text-max-width)
+
+   code
+      background-color: var(--color-b-alt)
+   
+   pre>code
+      background-color: unset
+
 // 2a) Portfolio
 // =================================================
 
-.company
-   text-transform: uppercase
-   letter-spacing: .02em
-   color: var(--color-a)
-   // border-bottom: var(--color-a) 4px solid
 
-.hero
-   margin-top: var(--space-2xl)
+.portfolio
 
-.greeting
-   margin-bottom: var(--space-sm)
-   @include text(4xl)
-   font-family: var(--font-secondary)
-   color: var(--color-t-h)
-   opacity: 0.9
+   h2
+      @include text(xl)
+      text-decoration: underline
+      margin-bottom: var(--space-sm)
 
-.project
-   background-color: var(--color-b-alt)
-   padding: var(--space-md)
-   margin-top: var(--space-sm)
-   margin-bottom: var(--space-sm)
+   .company
+      text-transform: uppercase
+      letter-spacing: .02em
+      color: var(--color-a)
+      // border-bottom: var(--color-a) 4px solid
 
-.featured
-   .caption
-      font-style: italic
-      color: var(--color-t)
-      text-align: right
+   .hero
+      margin-top: var(--space-2xl)
+
+   .greeting
+      margin-bottom: var(--space-sm)
+      @include text(4xl)
+      font-family: var(--font-secondary)
+      color: var(--color-t-h)
+      opacity: 0.9
+
+   .featured
+      padding: var(--space-sm)
+      background-color: var(--color-b-alt)
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: var(--space-md)
+
+      .project
+         padding: var(--space-sm)
+         border: 3px solid var(--color-p)
+
+      .caption
+         @include text(sm)
+         font-style: italic
+         color: var(--color-t)
+         text-align: right
+         margin-top: -1rem
+         margin-bottom: 4px
+         opacity: .6
+
+   .title
+      @include text(2xl)
+      grid-column: 1
+   
+
+   .headline
+      grid-column: 1
+      font-family: var(--font-primary)
+      
+
+   .project.not-featured
+      background-color: var(--color-b-alt)
+      padding: var(--space-sm)
+      margin-top: var(--space-sm)
+      margin-bottom: var(--space-sm)
+      display: grid
+      grid-template-columns: 1fr 1fr
+      align-items: end
+      grid-gap: var(--space-xs)
+
+      .left
+         grid-column: 1
+         grid-row: 1/3
+
+      .summary
+         grid-column: 2
+         grid-row: 1/3
