@@ -142,8 +142,11 @@ hr
          margin-bottom: var(--space-xs)
 
       .screenshot
+         transition: .2s
          width: 50%
          height: 50%
+         border-radius: 3px
+         filter: grayscale(100%)
 
       &:hover
          box-shadow: -5px 5px 0 var(--color-boxshadow)
@@ -151,6 +154,9 @@ hr
          cursor: pointer
          transform: translateX(0) translateY(0)
          color: var(--color-t)
+
+         .screenshot
+            filter: grayscale(0)
 
    .project.not-featured
       background-color: var(--color-b-alt)
