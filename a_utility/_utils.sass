@@ -12,10 +12,20 @@
 
 
 
-/*----------  All elements should have no margin as default ----------*/
-*
+/*----------  Remove default margins ----------*/
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd 
     margin: 0
 
+   
 /*---------- All elements should use border-box box-sizing------------*/
 *, *::before, *::after
     box-sizing: border-box
@@ -24,9 +34,9 @@
 nav ul *
     list-style: none
    
-/*---------- Height should be set on HTML and body to allow heights to be set more easily (idk how well this works) ------------*/
+/*---------- html & body should be at least the size of the screen ------------*/
 html, body
-    height: min-content
+    min-height: 100vh;
 
 /*---------- Media elements should fit inside their container  ------------*/
 /*---------- Media elements should not be inline elements  ------------*/
@@ -38,9 +48,49 @@ img, picture, video, canvas, svg
 input, button, textarea, select 
     font: inherit
 
+/*---------- A elements get default styles ------------*/
+a 
+   text-decoration-skip-ink: auto
+   color: currentColor
 
+   
 /*---------- Long words should be allowed to wrap to the next line, if necessary ------------*/
 /*---------- src: https://www.joshwcomeau.com/css/custom-css-reset/#digit-root-stacking-context ------------*/
 p, h1, h2, h3, h4, h5, h6
     overflow-wrap: break-word
+
+/*----------  Prevent font size inflation ----------*/
+/*---------- src: https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ ----------*/
+html 
+   -moz-text-size-adjust: none
+   -webkit-text-size-adjust: none
+   text-size-adjust: none
+
+/*---------- Set shorter line heights on headings and interactive elements -------------*/
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label 
+   line-height: 1
+
+
+/*---------- Balance text wrapping on headings -------------*/
+h1,
+h2,
+h3,
+h4 
+   text-wrap: balance
+
+input,
+button,
+textarea,
+select 
+   font: inherit
+
+
+
+
 
